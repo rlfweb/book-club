@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
-
-import logo from './logo.svg'
+import BooksContainer from './components/BooksContainer'
 
 const App = () => {
   const [books, setBooks] = useState([])
@@ -26,7 +25,11 @@ const App = () => {
 
   console.log(`the books array in our state`, books)
 
-  return <div>Hello Rebecca</div>
+  return (
+    <>
+      <BooksContainer books={books} />
+    </>
+  )
 }
 
 export default App
